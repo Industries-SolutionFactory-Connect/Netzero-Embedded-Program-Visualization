@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: Netzero-Embedded-Program-Visualization
+    package:
+        name: Netzero-Embedded-Program-Visualization
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Netzero-Embedded-Program-Visualization/tests
+            options:
+                outputdir: robot/Netzero-Embedded-Program-Visualization/results
+
+    robot_testdoc:
+        options:
+            path: robot/Netzero-Embedded-Program-Visualization/tests
+            output: robot/Netzero-Embedded-Program-Visualization/doc/Netzero-Embedded-Program-Visualization_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
